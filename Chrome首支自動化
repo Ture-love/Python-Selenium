@@ -13,4 +13,4 @@ driver.get("https://www.google.com")
 WebDriverWait(driver, 10)
 
 # 定位搜尋框 > 傳入字串
-driver.find_element(By.ID, "input").send_keys("測試傳入")
+driver.find_element(By.ID, "APjFqb").send_keys("測試傳入")
