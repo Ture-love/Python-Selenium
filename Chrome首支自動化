@@ -1,5 +1,6 @@
 #導入webdriver
 from selenium import webdriver
+from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 
 #建立一個chrome的webdriver
@@ -8,8 +9,14 @@ driver = webdriver.Chrome()
 #開啟的網址是google首頁
 driver.get("https://www.google.com")
 
+# 設定等候時間強制為3秒
+from time import sleep
+sleep(3)
+
 # 定位首個搜尋框 > 傳入字串
 driver.find_element(By.CLASS_NAME, "gLFyf").send_keys("測試傳入")
+# 執行搜尋操作
+driver.find_element(By.ID, "APjFqb").send_keys(Keys.ENTER)
 
 # 設定等候時間強制為10秒
 from time import sleep
