@@ -9,9 +9,12 @@ driver = webdriver.Chrome()
 driver.get("https://www.google.com")
 
 # 定位首個搜尋框 > 傳入字串
-driver.find_element(By.ID, "APjFqb").send_keys("測試傳入")
+driver.find_element(By.CLASS_NAME, "gLFyf").send_keys("測試傳入")
 
 # 設定等候時間強制為10秒
 from time import sleep
-sleep(60)
+sleep(10)
+
+#清理和關閉，在完成操作後，確保關閉Chrome瀏覽器，以釋放資源。
+driver.quit()
 
