@@ -8,9 +8,10 @@ driver = webdriver.Chrome()
 #開啟的網址是google首頁
 driver.get("https://www.google.com")
 
-# 定位搜尋框 > 傳入字串
+# 定位首個搜尋框 > 傳入字串
 driver.find_element(By.ID, "APjFqb").send_keys("測試傳入")
 
 # 設定等候時間強制為10秒
 from time import sleep
 sleep(60)
+
