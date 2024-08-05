@@ -1,7 +1,6 @@
 #導入webdriver
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
 
 #建立一個chrome的webdriver
 driver = webdriver.Chrome()
@@ -12,5 +11,6 @@ driver.get("https://www.google.com")
 # 定位搜尋框 > 傳入字串
 driver.find_element(By.ID, "APjFqb").send_keys("測試傳入")
 
-# 設定等候時間
-WebDriverWait(driver, 10)
+# 設定等候時間強制為10秒
+from time import sleep
+sleep(60)
